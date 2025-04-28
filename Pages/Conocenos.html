@@ -4,94 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conocenos - Megagym </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../CSS/Style.css">
 </head>
 <body>
+  <header>
     <div class="Encabezado">
-        
-      <header>
-        <figure>
-            <img class="LogoInst" src="../Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo en forma de boton Megagym">
-        </figure>
 
-     </header>
+     <a href="../index.html"><figure><img class="LogoInst" src="../Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo Megagym" /></figure></a>
     
+       
      <nav class="PagesList">
-         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./Eventos.html">Eventos</a></li>
-            <li><a href="./Tienda.html">Tienda</a></li>
-            <li><a href="./DeptoTecnico.html">Depto. Técnico</a></li>
-            <li><a href="./IniciarSesion.html">Iniciar Sesión</a></li>
-         </ul>
-
-        </nav>
+        <div class="topnav" id="myTopnav">
+          <div class="Pages">
+           <a href="./Conocenos.html" class="active">Conocenos</a>
+           <a href="./Eventos.html">Eventos</a>
+           <a href="./Tienda.html">Tienda</a>
+           <a href="./DeptoTecnico.html">Depto. Técnico</a>
+           <a href="./IniciarSesion.html">Iniciar Sesión</a>
+           <!-- Enlace con JavaScript (hamburguesa) -->
+             <a href="javascript:void(0);" class="icon" id="hamburgerIcon" onclick="myFunction()"> 
+               <i class="fa fa-bars"></i> 
+              </a>
+           </div>
+       </div>
+      </nav>
+        
     </div>
+ </header>
 
-    <div>
-        <main>
+ <main>
+    <div class="cuerpo">
+      <!--buscar fotos y videos de megarun y del gym-->
+      <section class="Ubicacion">
+        <h1>Estamos Ubicados en</h1>
 
-          <div class="NuestrasInstalaciones">
-            <h1>Nuestras instalaciones</h1>
+        <div class="ContenedorFrente">
 
-            <figure>
-              <img src="../Assets/Imagenes/ImagenesGym/MegaagymLibre.jpg" alt="">
-              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54 (1) - copia.jpeg" alt="">
-              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54 (2).jpeg" alt="">
-              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54.jpeg" alt="">
-            </figure>
-            <p>Contamos con un salon lleno de maquinas diseñadas para que tu entrenamiento sea totalmente especifico a tus objetivos, tambien contamos con un box equipado de materiales para manejar pesos libres y adaptarlos a tu gusto, tambien tenemos un amplio patio en el que podras recargar energiar o terminar de fundirlas, segun decidas</p>
-          </div>
+          <img class="GymFrente"  src="../Assets/Imagenes/ImagenesGym/frente 1 editado.png" alt="Imagen del Frente del gimnasio megagym">
+          <iframe class="Map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.0643507156933!2d-58.51962702437106!3d-33.00207887469038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa827d0b53203%3A0xcc811859434b0529!2sMega%20Gym!5e0!3m2!1ses!2sar!4v1737480845385!5m2!1ses!2sar" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
 
-          <div class="Horarios">
-            <h1> Horarios</h1>
-            <p>Podras encontrarnos de lunes a viernes de 6 a 23 hs y los dias sabados de 8 a 15hs</p>
-          </div>
+      </div>
 
-          <div class="Staff">
-            <h1>Staff</h1>
-            <p>Dependiendo el horario en el que asistas, son los instructores y el personal de administracion que te atenderan, conocelos:</p>
 
-            <div class="TarjetaProfe">
-              <img src="../Assets/Imagenes/PROFES/aRI.jpg" alt="">
-              <p class="Nombre">Ari</p>
-              <p class="Puesto">Nutri Administrativa</p>
-              <p class="Horario">De 7 a 15hs</p>
+      </section>
+      <section>
+        <h1>Nuestras Instalaciones</h1>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54 (1).jpeg" class="d-block w-100" alt="Logotipo que se encuentra dentro del gimnasio">
             </div>
-
-            <div class="TarjetaProfe">
-              <img src="../Assets/Imagenes/PROFES/raul.jpg" alt="">
-              <p class="Nombre"> Raul</p>
-              <p class="Puesto"> Director</p>
-              <p class="Horario"> A coordinar</p>
+            <div class="carousel-item">
+              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54 (2).jpeg" class="d-block w-100" alt="Interior del box de pesos libres del gimnasio megagym">
+            </div>
+            <div class="carousel-item">
+              <img src="../Assets/Imagenes/ImagenesGym/WhatsApp Image 2025-01-13 at 10.30.54.jpeg" class="d-block w-100" alt="Patio del gimnasio megagym">
             </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
-          <div class="Servicios">
-            <h1>Servicios</h1>
-            <p>En Mega te ofrecemos entrenamiento personalizado segun TU objetivo y TU gusto a lahora de entrenar. 
-            Tambien te ofrecemos seguimiento antropometrico mensual para evaluar tu evolucion con nuestro entrenamiento.
-            </p>
+        <p>
+          Contamos con un salon lleno de maquinas diseñadas para que tu
+          entrenamiento sea totalmente especifico segun tus objetivos,
+          tambien con un box equipado de pesos libres para adaptarlo a tu
+          gusto y con un patio amplio en el que podras recargar energias o
+          terminar de fundirlas.
+        </p>
+      </section>
+
+      <section>
+        <h1>Horarios</h1>
+        <p>
+          Podras encontrarnos de lunes a viernes de 7 a 23 hs y sabados de 8
+          a 15hs.
+        </p>
+      </section>
+
+      <section>
+        <h1>Staff</h1>
+        <p>
+          Dependiendo el horario que asistas variaran los instructores y el
+          personal de administracion, conocelos:
+        </p>
+      <div class="Profes">
+        <div class="Profes">
+          <div class="Instructor">
+            <img src="../Assets/Imagenes/PROFES/aRI.jpg" class="card-img" alt="Ariadna - Recepcionista">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Ari</h5>
+              <p class="card-text">Nuestra Nutri administrativa</p>
+              <p class="card-text"><small>De lunes a viernes de 7 a 15 hs</small></p>
+            </div>
           </div>
-
-          <div class="Opiniones">
-            <h1>Opiniones</h1>
+          <div class="Instructor">
+            <img src="../Assets/Imagenes/PROFES/nati.jpg" class="card-img" alt="Nati - Jefecita">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Cari</h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small>De lunes a viernes de 14 a 22 hs</small></p>
+            </div>
           </div>
+          <div class="Instructor">
+            <img src="../Assets/Imagenes/PROFES/raul.jpg" class="card-img" alt="Raul - Director">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Raul</h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small>Coordinamos</small></p>
+            </div>
+          </div>
+        </div>
+        
+      
 
-          <div class="Contacto">
-            <h1>Contacto</h1>
+      
+        <!--poner fotos de los chicos donde al pasar por encima se vea el horario-->
+      </section>
+
+      <section>
+        <h1>Servicios</h1>
+        <p>
+          En Mega te ofrecemos entrenamiento personalizado, segun TU
+          objetivo y TU gusto a la hora de entrenar. Tambien te ofrecemos
+          seguimiento antropometrico mensual para evaluar tu evolucion con
+          nuestro entrenamiento.
+        </p>
+      </section>
+
+      <section>
+        <h1>Opiniones</h1>
+        <!---targetas de comentarios de google con valoraciones -->
+      </section>
+
+      <section>
+        <form>
+        
+            <legend>Contacto</legend>
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nombre</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+            </div>
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">N° de contacto</label>
+              <input type="number" id="disabledTextInput" class="form-control" placeholder="">
+            </div>
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">E-Mail</label>
+              <input type="email" id="disabledTextInput" class="form-control" placeholder="">
+            </div>
+            <div class="mb-3">
+              <label for="Consulta">Dejanos tu consulta</label>
+              <textarea class="form-control" placeholder="" id="Consulta" style="height: 100px"></textarea>
             
-          </div>
+            </div>
+            <div>
+              <label for="ContactoMed">Deseo que me contacten mediante</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Whatsapp
+              </label>
+            </div>
+            
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                E-mail
+              </label>
+            </div>
 
-        </main>
+          <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+            </div>
+        
+        </form>
+      </section>
+
+
     </div>
+ </main>
 
     <div>
         <footer>
@@ -146,7 +254,21 @@
 
         </footer>
     </div>
-
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+        <script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      </script>
     
 </body>
 </html>
