@@ -1,50 +1,18 @@
-/*Paleta de colores*/
-/*Fuente*/
-/*Paleta de colores*/
-/*Fuente*/
-body {
-  background-color: black;
-  color: white;
-  font-family: "montserrat";
-  font-size: medium;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 4 |   background-color: $Negro;
+ *   |                     ^^^^^^
+ *   '
+ *   SASS\PARTIALS\_Generales.scss 4:21  @use
+ *   SASS\Estilos.scss 2:1               root stylesheet */
 
-/* Encabezado */
-.Encabezado {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  z-index: 1000;
-  display: flex;
-  width: 100%;
-  padding: 0;
-  align-items: end; /* Cambiado de end a center */
-  height: fit-content;
-}
-
-.LogoInst {
-  max-width: 150px;
-  height: auto;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 4 \2502    background-color: $Negro;\d\a   \2502                      ^^^^^^\a   \2575 \a   SASS\\PARTIALS\\_Generales.scss 4:21  @use\a   SASS\\Estilos.scss 2:1               root stylesheet";
 }
-
-.PagesList {
-  display: flex;
-  color: white;
-}
-.PagesList .Pages ul {
-  text-decoration: none;
-  display: flex;
-  justify-content: space-around;
-}
-.PagesList .Pages ul li {
-  text-decoration: none;
-}
-.PagesList .Pages ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-/*# sourceMappingURL=Estilo.css.map */
