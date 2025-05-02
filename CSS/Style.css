@@ -5,107 +5,16 @@ body {
     font-size: medium;
 }
 
-/* Navegación normal */
-.topnav .Pages a {
-    display: inline-block;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-}
-  
-  /* Ícono de hamburguesa oculto en escritorio */
-  .topnav .icon {
-    display: none;
-}
-  
-  /* Estilo cuando es responsive */
-  .topnav.responsive .Pages {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff; /* Puedes cambiar el color */
-}
-  
-  .topnav.responsive .Pages a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-}
 
 /* Encabezado */
-/* Encabezado */
-.Encabezado {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    z-index: 1000;
-    display: flex;
-    width: 100%;
-    padding: 0;
-    align-items:end; /* Cambiado de end a center */
-    height: fit-content;
- 
-}
+
 
 
 
 /* Logo */
-.LogoInst { 
-    max-width: 150px;
-    height: auto;
-    display: block;
-    
-
-}
-
-.PagesList{
-    flex-grow: 1;
-}
-
-/* Contenedor de páginas */
-.Pages {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-/* Enlaces de navegación */
-.topnav a {
-    color: #f2f2f2;
-    text-align:end;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block; /* Asegura que los enlaces sean bloques para que se comporten como elementos de fila */
-}
 
 
-/* Estilos de hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
-/* Estilo de la hamburguesa */
-#hamburgerIcon {
-    display: none; /* Ocultar en pantallas grandes */
-}
-
-/* Media Query: a partir de 768px para abajo */
-@media screen and (max-width: 768px) {
-    .topnav .Pages a { 
-      display: none; /* Oculta los links */
-    }
-    .topnav .icon {
-      display: block; /* Muestra el ícono hamburguesa */
-      font-size: 24px;
-      padding: 14px 16px;
-      cursor: pointer;
-    }
-    .topnav.responsive .Pages a {
-      display: block; /* Muestra los links cuando clickeas */
-    }
-  }
 
 
 /* Video principal */

@@ -1,0 +1,50 @@
+/*Paleta de colores*/
+/*Fuente*/
+/*Paleta de colores*/
+/*Fuente*/
+body {
+  background-color: black;
+  color: white;
+  font-family: "montserrat";
+  font-size: medium;
+}
+
+/* Encabezado */
+.Encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  align-items: end; /* Cambiado de end a center */
+  height: fit-content;
+}
+
+.LogoInst {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.PagesList {
+  display: flex;
+  color: white;
+}
+.PagesList .Pages ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+.PagesList .Pages ul li {
+  text-decoration: none;
+}
+.PagesList .Pages ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=Estilo.css.map */
