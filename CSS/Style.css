@@ -46,31 +46,6 @@ body {
     color: rgb(225, 202, 58);
 }
 
-h1, h2 {
-    margin: 0;
-}
-
-button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: rgb(225, 202, 58);
-    border: none;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Descarga la app */
-.DescApp img {
-    width: 20%;
-}
-
-.DescApp {
-    background-image: url(../Assets/Imagenes/ImagenesGym/frente\ 1\ editado.png);
-    background-size: cover;
-    background-position: 20% 30%;
-}
 
 
 /*MAIN GENERAL*/

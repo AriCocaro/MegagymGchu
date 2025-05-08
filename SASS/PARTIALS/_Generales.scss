@@ -1,73 +1,69 @@
-@use "Variables";
+@use "./Variables" as vars;
+@use "./Mixins" as mixin;
 
 body {
-  background-color: $Negro;
-  color: $Blanco;
-  font-family: $Fuente;
+  background-color: vars.$Negro;
+  color: vars.$Blanco;
+  font-family: vars.$Fuente;
   font-size: medium;
 }
 
 
 header {
   width: 100%;
-  background-color:$Negro;
+  background-color: vars.$Negro;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color:$Negro;
   z-index: 1000;
-  
+
   .Encabezado {
     display: flex;
     align-items: center;
-    justify-content:flex-start;
     padding: 10px 20px;
     flex-wrap: wrap;
- 
+  
     .LogoInst {
-     max-width: 150px;
-     height: auto;
+      max-width: 150px;
+      height: auto;
     }
   
     .PagesList {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display:flex
-        
-    
-      .topnav a { /* Style the links inside the navigation bar */
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-     }
-
-          
-      .topnav a:hover {/* Change the color of links on hover */
-        background-color: #ddd;
-         color: black;
-     }
-
-          
-      .topnav a.active {/* Add an active class to highlight the current page */
-        background-color: #04AA6D;
-        color: white;
-     }
-
-          
-      .topnav .icon {/* Hide the link that should open and close the topnav on small screens */
-        display: none;
-     }
-      .topnav .responsive{
-        width: 100%;
+      flex-grow: 1;
+      display: flex;
+      margin-left: 100px;
+  
+      .topnav {
+        display: flex;
+        justify-content: space-between; // ← distribuye los links con el mismo espacio entre ellos
+        flex-grow: 1;
+  
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 14px 16px;
+          display: block;
+          width: 100%; // Opcional, si querés que todos los links midan lo mismo
+          text-align: center;
+        }
+  
+        a:hover {
+          background-color: vars.$Amarillo;
+          color: black;
+        }
+  
+  
+        .icon {
+          display: none;
+        }
+  
+        &.responsive {
+          width: 100%;
+        }
       }
-      
     }
-    
   }
 }
+
+

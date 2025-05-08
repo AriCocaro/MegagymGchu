@@ -1,0 +1,21 @@
+@use "./Variables" as vars;
+
+/*BOTONES*/
+@mixin EstiloBoton{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: vars.$Amarillo;
+    border: none;
+    color: vars.$Negro;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: vars.$Negro;
+        color: vars.$Amarillo;
+
+    }
+}
+  
+  
