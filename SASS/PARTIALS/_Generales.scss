@@ -67,3 +67,58 @@ header {
 }
 
 
+footer {
+  .DescApp {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 20px;
+    padding: 0 20px;
+    position: relative;
+    background-image: url(../Assets/Imagenes/ImagenesGym/frente\ 1\ editado.png);
+    background-size: cover;
+    background-position: 20% 30%;
+    margin-top: 50px;
+    
+ 
+
+    figure {
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transform: translateY(-33%);
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      width: 500px;
+      height: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 0;
+      color: vars.$Negro;
+    }
+
+    .botones {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px;
+
+    }
+
+    .Boton {
+      @include mixin.EstiloBoton;
+      white-space: nowrap;
+    }
+  }
+}  

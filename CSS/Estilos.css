@@ -56,6 +56,63 @@ header .Encabezado .PagesList .topnav.responsive {
   width: 100%;
 }
 
+footer .DescApp {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 20px;
+  padding: 0 20px;
+  position: relative;
+  background-image: url(../Assets/Imagenes/ImagenesGym/frente\ 1\ editado.png);
+  background-size: cover;
+  background-position: 20% 30%;
+  margin-top: 50px;
+}
+footer .DescApp figure {
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(-33%);
+  position: relative;
+  z-index: 1;
+}
+footer .DescApp img {
+  width: 500px;
+  height: auto;
+}
+footer .DescApp .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  color: black;
+}
+footer .DescApp .botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+footer .DescApp .Boton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(225, 202, 58);
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+footer .DescApp .Boton:hover {
+  background-color: black;
+  color: rgb(225, 202, 58);
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -82,4 +139,4 @@ header .Encabezado .PagesList .topnav.responsive {
   }
 }
 
-/*# sourceMappingURL=Estilo.css.map */
+/*# sourceMappingURL=Estilos.css.map */
