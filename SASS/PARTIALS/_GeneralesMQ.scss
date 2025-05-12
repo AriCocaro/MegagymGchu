@@ -1,15 +1,164 @@
-@use "./Mixins";
+@use "./Mixins" ;
+@use "./Display";
+@use "./Variables" as vars;
 
-@include Display.responsive(mobile){
-  
-  body{
-    header{
-      .Encabezado {
-      display: flex;
-      position: fixed;
-      background-color: rgb(43,42,42);
-     }
+@include Display.responsive(mobile) {
+  header .Encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .icon {
+      display: block;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
     }
-    
+
+    .topnav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+      }
+    }
+
+    .topnav.responsive {
+      display: flex;
+    }
+  }
+}
+
+@include Display.responsive(desktop) {
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    a {
+      display: block;
+      padding: 14px 20px;
+      text-align: center;
+    }
+  }
+
+  .icon {
+    display: none;
+  }
+}
+.TNMF {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+// Ocultar la X (primer link del menú) en desktop
+.X {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
+#mySidebar {
+  @media (min-width: 769px) {
+    display: flex !important;
+    position: static;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: vars.$Negro;
+    padding-top: 60px;
+    width: 300px;
+    z-index: 3;
+    transition: 0.3s;
+  }
+}
+
+.PagesList ul {
+
+  @media (min-width: 769px) {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ItemNav {
+
+
+  @media (min-width: 769px) {
+    color: vars.$Amarillo;
+  }
+}
+
+
+
+/*footer*/
+@media (max-width: 768px) {
+  footer {
+    .DescApp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-position: center;
+      padding: 20px;
+
+      figure {
+        transform: none;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          max-width: 320px;
+          height: auto;
+        }
+      }
+
+      .content {
+        text-align: center;
+        align-items: center;
+        padding: 0;
+
+        h5 {
+          margin-bottom: 10px;
+        }
+      }
+
+      .botones {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+
+        .Boton {
+          flex: 1 1 auto;
+          max-width: 140px;
+        }
+      }
+    }
   }
 }

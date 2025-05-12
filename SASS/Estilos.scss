@@ -1,4 +1,8 @@
+@use "partials/Index";
 @use "partials/Variables";
 @use "partials/Generales";
-@use "partials/GeneralesMQ";
 @use "partials/Mixins";
+@use "./partials/Home";
+@use "partials/GeneralesMQ";
+@use "partials/Display";
+

@@ -67,6 +67,39 @@ header {
 }
 
 
+
+.PagesList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.ItemNav {
+  color: vars.$Blanco;
+  text-decoration: none;
+  
+
+
+}
+
+
+
+.TNMF {
+  a {
+    font-size: 2rem;
+    color: vars.$Blanco;
+    padding: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 4;
+  }
+}
+
+
+
 footer {
   .DescApp {
     display: grid;

@@ -1,29 +1,345 @@
-/* Error: There is no module with the namespace "Display".
- *    ,
- * 3  | / @include Display.responsive(mobile){
- * 4  | |   
- * 5  | |   body{
- * 6  | |     header{
- * 7  | |       .Encabezado {
- * 8  | |       display: flex;
- * 9  | |       position: fixed;
- * 10 | |       background-color: rgb(43,42,42);
- * 11 | |      }
- * 12 | |     }
- * 13 | |     
- * 14 | |   }
- * 15 | \ }
- *    '
- *   SASS\PARTIALS\_GeneralesMQ.scss 3:1  @use
- *   SASS\Estilos.scss 3:1                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "Display".\a    \2577 \a 3  \2502  \250c  @include Display.responsive(mobile){\a 4  \2502  \2502    \a 5  \2502  \2502    body{\a 6  \2502  \2502      header{\a 7  \2502  \2502        .Encabezado {\a 8  \2502  \2502        display: flex;\a 9  \2502  \2502        position: fixed;\a 10 \2502  \2502        background-color: rgb(43,42,42);\a 11 \2502  \2502       }\a 12 \2502  \2502      }\a 13 \2502  \2502      \a 14 \2502  \2502    }\a 15 \2502  \2514  }\a    \2575 \a   SASS\\PARTIALS\\_GeneralesMQ.scss 3:1  @use\a   SASS\\Estilos.scss 3:1                root stylesheet';
+/*Paleta de colores*/
+/*Fuente*/
+/*media querys*/
+/*BOTONES*/
+body {
+  background-color: black;
+  color: white;
+  font-family: "montserrat";
+  font-size: medium;
 }
+
+header {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+header .Encabezado {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+header .Encabezado .LogoInst {
+  max-width: 150px;
+  height: auto;
+}
+header .Encabezado .PagesList {
+  flex-grow: 1;
+  display: flex;
+  margin-left: 100px;
+}
+header .Encabezado .PagesList .topnav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+header .Encabezado .PagesList .topnav a {
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+header .Encabezado .PagesList .topnav a:hover {
+  background-color: rgb(225, 202, 58);
+  color: black;
+}
+header .Encabezado .PagesList .topnav .icon {
+  display: none;
+}
+header .Encabezado .PagesList .topnav.responsive {
+  width: 100%;
+}
+
+.PagesList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ItemNav {
+  color: white;
+  text-decoration: none;
+}
+
+.TNMF a {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 4;
+}
+
+footer .DescApp {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 20px;
+  padding: 0 20px;
+  position: relative;
+  background-image: url(../Assets/Imagenes/ImagenesGym/frente\ 1\ editado.png);
+  background-size: cover;
+  background-position: 20% 30%;
+  margin-top: 50px;
+}
+footer .DescApp figure {
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(-33%);
+  position: relative;
+  z-index: 1;
+}
+footer .DescApp img {
+  width: 500px;
+  height: auto;
+}
+footer .DescApp .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  color: black;
+}
+footer .DescApp .botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+footer .DescApp .Boton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(225, 202, 58);
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+footer .DescApp .Boton:hover {
+  background-color: black;
+  color: rgb(225, 202, 58);
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  header .Encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .Encabezado .icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+  }
+  header .Encabezado .topnav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  header .Encabezado .topnav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+  header .Encabezado .topnav.responsive {
+    display: flex;
+  }
+}
+@media (min-width: 1025px) {
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .topnav a {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+  }
+  .icon {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .TNMF {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .TNMF {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .X {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  #mySidebar {
+    display: flex !important;
+    position: static;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  #mySidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    padding-top: 60px;
+    width: 300px;
+    z-index: 3;
+    transition: 0.3s;
+  }
+}
+
+@media (min-width: 769px) {
+  .PagesList ul {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .PagesList ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) {
+  .ItemNav {
+    color: rgb(225, 202, 58);
+  }
+}
+
+/*footer*/
+@media (max-width: 768px) {
+  footer .DescApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    padding: 20px;
+  }
+  footer .DescApp figure {
+    transform: none;
+    margin-bottom: 20px;
+  }
+  footer .DescApp figure img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  footer .DescApp .content {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+  footer .DescApp .content h5 {
+    margin-bottom: 10px;
+  }
+  footer .DescApp .botones {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  footer .DescApp .botones .Boton {
+    flex: 1 1 auto;
+    max-width: 140px;
+  }
+}
+.PrimerVideo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.PrimerVideo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.PrimerVideo .TextoDelVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+}
+.PrimerVideo .TextoDelVideo h1 {
+  font-size: 2.5rem;
+}
+.PrimerVideo .TextoDelVideo h2 {
+  font-size: 1.25rem;
+}
+.PrimerVideo .TextoDelVideo .Boton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(225, 202, 58);
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.PrimerVideo .TextoDelVideo .Boton:hover {
+  background-color: black;
+  color: rgb(225, 202, 58);
+}
+
+@media (max-width: 768px) {
+  .TextoDelVideo h1 {
+    font-size: 2rem;
+  }
+  .TextoDelVideo h2 {
+    font-size: 1rem;
+  }
+  .TextoDelVideo .Boton {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+/*# sourceMappingURL=Estilos.css.map */
