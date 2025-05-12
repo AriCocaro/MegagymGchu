@@ -33,10 +33,19 @@ header .Encabezado .PagesList {
   display: flex;
   margin-left: 100px;
 }
+header .Encabezado .PagesList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 header .Encabezado .PagesList .topnav {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+}
+header .Encabezado .PagesList .topnav .ItemNav {
+  color: white;
+  text-decoration: none;
 }
 header .Encabezado .PagesList .topnav a {
   text-decoration: none;
@@ -56,19 +65,7 @@ header .Encabezado .PagesList .topnav .icon {
 header .Encabezado .PagesList .topnav.responsive {
   width: 100%;
 }
-
-.PagesList ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.ItemNav {
-  color: white;
-  text-decoration: none;
-}
-
-.TNMF a {
+header .TNMF a {
   font-size: 2rem;
   color: white;
   padding: 1rem;
@@ -77,6 +74,10 @@ header .Encabezado .PagesList .topnav.responsive {
   top: 1rem;
   cursor: pointer;
   z-index: 4;
+}
+
+main {
+  margin-top: 100px;
 }
 
 footer .DescApp {
@@ -278,6 +279,101 @@ footer .DescApp .Boton:hover {
     max-width: 140px;
   }
 }
+.cuerpo h1 {
+  margin-top: 50px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+.cuerpo p {
+  margin-top: 25px;
+  font-size: 1rem;
+  padding: 2rem;
+}
+.cuerpo .Ubicacion .ContenedorFrente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cuerpo .Ubicacion .ContenedorFrente .GymFrente,
+.cuerpo .Ubicacion .ContenedorFrente .Map {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .cuerpo .Ubicacion .ContenedorFrente {
+    flex-wrap: nowrap;
+  }
+  .cuerpo .Ubicacion .GymFrente,
+  .cuerpo .Ubicacion .Map {
+    width: 50%;
+    height: 400px;
+  }
+}
+.cuerpo .Instalaciones img {
+  width: auto;
+  height: calc(100vh - 150px);
+  object-fit: contain;
+}
+.cuerpo .TarjetasStaff {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.cuerpo .TarjetasStaff .StaffUnipers {
+  margin: 10px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.cuerpo .TarjetasStaff .StaffUnipers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cuerpo .TarjetasStaff .StaffUnipers .CardStaffOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.cuerpo .TarjetasStaff .StaffUnipers:hover .CardStaffOverlay {
+  opacity: 1;
+}
+.cuerpo .TarjetasStaff .StaffUnipers .OverNombre {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.cuerpo .TarjetasStaff .StaffUnipers .OverText {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 0px;
+}
+
 .PrimerVideo {
   position: relative;
   width: 100%;

@@ -1,0 +1,119 @@
+@use "./Variables" as vars;
+@use "./Display" as display;
+@use "./Mixins" as mixin;
+
+.cuerpo{
+ h1 {
+    margin-top: 50px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  p{
+    margin-top: 25px;
+    font-size: 1rem;
+    padding: 2rem;
+  }
+
+
+    .Ubicacion {
+    .ContenedorFrente {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap; // permite que se acomoden en mobile
+
+        .GymFrente,
+        .Map {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+    }
+
+    // Media query para pantallas grandes: se colocan en fila
+    @media (min-width: 768px) {
+    .Ubicacion .ContenedorFrente {
+        flex-wrap: nowrap; // evita que se apilen
+    }
+
+    .Ubicacion .GymFrente,
+    .Ubicacion .Map {
+        width: 50%;
+        height: 400px; // podés ajustar según tu necesidad
+    }
+    }
+
+    .Instalaciones{
+        img{
+            width: auto;
+            height: calc(100vh - 150px);
+            object-fit: contain;
+        }
+
+    }
+
+   .TarjetasStaff {
+        display: flex;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+
+        .StaffUnipers {
+            margin: 10px;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .CardStaffOverlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 15px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover .CardStaffOverlay {
+                opacity: 1;
+            }
+
+            .OverNombre {
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .OverText {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 0px;
+            }
+        }
+    }
+}

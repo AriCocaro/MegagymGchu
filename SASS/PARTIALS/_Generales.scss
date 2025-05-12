@@ -33,11 +33,21 @@ header {
       flex-grow: 1;
       display: flex;
       margin-left: 100px;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
   
       .topnav {
         display: flex;
         justify-content: space-between; // ← distribuye los links con el mismo espacio entre ellos
         flex-grow: 1;
+
+        .ItemNav {
+          color: vars.$Blanco;
+          text-decoration: none;
+        }
   
         a {
           text-decoration: none;
@@ -63,29 +73,11 @@ header {
         }
       }
     }
-  }
-}
+    
+ 
 
-
-
-.PagesList ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-}
-
-.ItemNav {
-  color: vars.$Blanco;
-  text-decoration: none;
-  
-
-
-}
-
-
-
-.TNMF {
+ }
+ .TNMF {
   a {
     font-size: 2rem;
     color: vars.$Blanco;
@@ -98,6 +90,14 @@ header {
   }
 }
 
+}
+
+
+
+
+main {
+  margin-top: 100px;
+}
 
 
 footer {
