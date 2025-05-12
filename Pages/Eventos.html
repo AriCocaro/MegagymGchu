@@ -4,134 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos - Megagym</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../CSS/Style.css">
+  <!-- Bootstrap -->
+ <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100..900&family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="../CSS/Estilos.css" />
 </head>
 <body>
-  <header>
+ <header>
     <div class="Encabezado">
-
-     <a href="../index.html"><figure><img class="LogoInst" src="../Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo Megagym" /></figure></a>
-    
-       
-     <nav class="PagesList">
+      <a href="../index.html">
+        <figure><img class="LogoInst" src="../Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo Megagym" /></figure>
+      </a>
+            
+      <nav class="PagesList" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>               
         <div class="topnav" id="myTopnav">
-          <div class="Pages">
-           <a href="./Conocenos.html" class="active">Conocenos</a>
-           <a href="./Eventos.html">Eventos</a>
-           <a href="./Tienda.html">Tienda</a>
-           <a href="./DeptoTecnico.html">Depto. Técnico</a>
-           <a href="./IniciarSesion.html">Iniciar Sesión</a>
-           <!-- Enlace con JavaScript (hamburguesa) -->
-             <a href="javascript:void(0);" class="icon" id="hamburgerIcon" onclick="myFunction()"> 
-               <i class="fa fa-bars"></i> 
-              </a>
-           </div>
-       </div>
-      </nav>
+         <ul>
+            <li><a href="javascript:void(0)" onclick="w3_close()" class="ItemNav Boton X">X</a></li>
+            <li><a href="./Conocenos.html" onclick="w3_close()" class="ItemNav Boton">CONOCENOS</a> </li>
+            <li><a href="./Tienda.html" onclick="w3_close()" class="ItemNav Boton">TIENDA</a> </li>
+            <li><a href="./Eventos.html" onclick="w3_close()" class="ItemNav Boton">EVENTOS</a></li>
+            <li><a href="./DeptoTecnico.html" onclick="w3_close()" class="ItemNav Boton">DEPARTAMENTO TECNICO</a></li>
+            <li><a href="./IniciarSesion.html" onclick="w3_close()" class="ItemNav Boton">INICIAR SESION</a></li>
+
+         </ul>
+        </div>
+      </nav>   
+  
+      
+
+      <div class="TNMF">
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
         
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="EfectoOverlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+          
+      </div>
     </div>
  </header>
 
-     <div>
-        <main>
+
+  <main>
           
 
 
-          <div class="Pescadores">
-            <h1>Voley Club Pescadores</h1>
-            <p>Este verano lo comenzamos a full con los deportistas del club de la ciudad de gualeguaychu, Club Pescadores, los cuales estan visitando nuestras instalaciones para la realizacion de su pretemporada fisica a cargo de nuestro director Raul Aubert. Todos los exitos en este nuevo año de competencia chicos!</p>
-            <figure>
-              <img src="../Assets/Imagenes/Eventos/pescadores.jpeg" alt="">
-            </figure>
-          </div>
+   <div class="Pescadores">
+     <h1>Voley Club Pescadores</h1>
+     <p>Este verano lo comenzamos a full con los deportistas del club de la ciudad de gualeguaychu, Club Pescadores, los cuales estan visitando nuestras instalaciones para la realizacion de su pretemporada fisica a cargo de nuestro director Raul Aubert. Todos los exitos en este nuevo año de competencia chicos!</p>
+     <figure>
+        <img src="../Assets/Imagenes/Eventos/pescadores.jpeg" alt="">
+      </figure>
+   </div>
 
 
 
-          <div class="Megarun2024">
-            <h1>MEGARUN 2024</h1>
-            <p>Este año redoblamos la apuesta, recorrimos 10Km y 5Km, fue toda una fiesta.
-            </p>
+   <div class="Megarun2024">
+     <h1>MEGARUN 2024</h1>
+     <p>Este año redoblamos la apuesta, recorrimos 10Km y 5Km, fue toda una fiesta.
+     </p>
 
-            <figure>
-              <img src="../Assets/Imagenes/Eventos/mgr.jpeg" alt="">
-              <img src="../Assets/Imagenes/Eventos/mgr1.jpeg" alt="">
-              <img src="../Assets/Imagenes/Eventos/mgr4.jpeg" alt="">
-              <img src="../Assets/Imagenes/Eventos/mgr5.png" alt="">
-            </figure>
+      <figure>
+       <img src="../Assets/Imagenes/Eventos/mgr.jpeg" alt="">
+       <img src="../Assets/Imagenes/Eventos/mgr1.jpeg" alt="">
+       <img src="../Assets/Imagenes/Eventos/mgr4.jpeg" alt="">
+       <img src="../Assets/Imagenes/Eventos/mgr5.png" alt="">
+      </figure>
 
-          </div>
 
-        </main>
-     </div>
-
-     <div>
-        <footer>
-            <div class="DescApp">
-                <figure>
-                    <img src="../Assets/Imagenes/redes/dispositivo-digital-pantalla-telefono-movil.png" alt="mocups de aplicacion megagym">
-                </figure>
-                <h5>Descargá nuestra app, obtené beneficios extras, tips, entrenamientos.</h5>
-                <button type="button">GooglePlay</button>
-                <button type="button">AppleStore</button>
-            </div>
-
-            <div class="Pie">
-                <h4>Sabemos lo que hacemos.</h4>
-
-                <div class="item">
-                  <a href="https://www.instagram.com/megagymgchu/">
-                    <img
-                      src="../Assets/Imagenes/redes/instagram.png"
-                      alt="logo de instagram"
-                      style="width: 20px; height: 20px"
-                    />
-                  </a>
-                  <p class="texto">Instagram</p>
-                </div>
-        
-                <div class="item">
-                  <a
-                    href="https://api.whatsapp.com/send/?phone=5493446670344&text&type=phone_number&app_absent=0"
-                  >
-                    <img
-                      src="../Assets/Imagenes/redes/Call.png"
-                      alt="logo de whatsapp"
-                      style="width: 20px; height: 20px"
-                    />
-                  </a>
-                  <p class="texto">Whatsapp</p>
-                </div>
-        
-                <div class="item">
-                  <a href="https://maps.app.goo.gl/EoLVyJUYuFobR9ut8">
-                    <img
-                      src="../Assets/Imagenes/redes/location.png"
-                      alt="icono ubicación"
-                      style="width: 20px; height: 20px"
-                    />
-                  </a>
-                  <p class="texto">Ubicación</p>
-                </div>
-
-            </div>
-
-        </footer>
     </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>
-       
+ </main>
+    
+
+ <footer>
+   <div class="DescApp">
+     <figure>
+        <img src="../Assets/Imagenes/redes/dispositivo-digital-pantalla-telefono-movil.png" alt="mocups de aplicacion megagym">
+     </figure>
+      <div class="content">
+         <h5>Descargá nuestra app, obtené beneficios extras, tips, entrenamientos.</h5>
+         <div class="botones">
+            <button class="Boton" type="button">GooglePlay</button>
+            <button class="Boton" type="button">AppleStore</button>
+        </div>
+      </div>
+   </div>
+    
+   <div class="Pie">
+      <h4>Sabemos lo que hacemos.</h4>
+
+     <div class="item">
+       <a href="https://www.instagram.com/megagymgchu/">
+          <img src="../Assets/Imagenes/redes/instagram.png" alt="logo de instagram"style="width: 20px; height: 20px"/>
+       </a>
+       <p class="texto">Instagram</p>
+     </div>
+                          
+      <div class="item">
+        <a href="https://api.whatsapp.com/send/?phone=5493446670344&text&type=phone_number&app_absent=0">
+         <img src="../Assets/Imagenes/redes/Call.png" alt="logo de whatsapp" style="width: 20px; height: 20px" />
+        </a>
+        <p class="texto">Whatsapp</p>
+     </div>
+                          
+     <div class="item">
+       <a href="https://maps.app.goo.gl/EoLVyJUYuFobR9ut8">
+         <img src="../Assets/Imagenes/redes/location.png" alt="icono ubicación" style="width: 20px; height: 20px" />
+       </a>
+       <p class="texto">Ubicación</p>
+     </div>
+   </div>
+
+ </footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     
+ <script>
+   <!--Script to open and close sidebar-->
+    function w3_open() {
+     document.getElementById("mySidebar").style.display = "block";
+     document.getElementById("myOverlay").style.display = "block";
+   }
+      
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+   }
+   </script>
+
 </body>
 </html>

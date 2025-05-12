@@ -79,6 +79,18 @@ header .TNMF a {
 main {
   margin-top: 100px;
 }
+main h1 {
+  margin-top: 50px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+main p {
+  margin-top: 25px;
+  font-size: 1rem;
+  padding: 2rem;
+}
 
 footer .DescApp {
   display: grid;
@@ -280,7 +292,7 @@ footer .DescApp .Boton:hover {
   }
 }
 .cuerpo h1 {
-  margin-top: 50px;
+  margin-top: 100px;
   font-size: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
@@ -372,6 +384,12 @@ footer .DescApp .Boton:hover {
   font-size: 12px;
   text-align: center;
   margin-top: 0px;
+}
+
+.DtoTecnico img {
+  height: calc(100vh - 150px);
+  width: auto;
+  object-fit: contain;
 }
 
 .PrimerVideo {
