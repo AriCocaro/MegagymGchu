@@ -157,8 +157,11 @@ form {
     align-items: center;
     gap: 0.5rem;
   }
-  input[type="radio"] {
-  accent-color: vars.$Amarillo;
+ 
+  .form-check-input:checked {
+  background-color: vars.$Amarillo;
+  border-color: vars.$Negro;
+  box-shadow: none;
  }
 
 

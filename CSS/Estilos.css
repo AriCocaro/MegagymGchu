@@ -148,6 +148,11 @@ footer .DescApp .Boton:hover {
   background-color: black;
   color: rgb(225, 202, 58);
 }
+footer .Pie {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (min-width: 300px) and (max-width: 767px) {
   header .Encabezado {
@@ -418,8 +423,10 @@ form .col-auto {
   align-items: center;
   gap: 0.5rem;
 }
-form input[type=radio] {
-  accent-color: rgb(225, 202, 58);
+form .form-check-input:checked {
+  background-color: rgb(225, 202, 58);
+  border-color: black;
+  box-shadow: none;
 }
 form .Boton {
   margin-top: 1rem;
@@ -437,6 +444,12 @@ form .Boton:hover {
   color: rgb(225, 202, 58);
 }
 
+.DtoTecnico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .DtoTecnico img {
   height: calc(100vh - 150px);
   width: auto;

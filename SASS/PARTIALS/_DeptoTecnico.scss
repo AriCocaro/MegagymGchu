@@ -3,7 +3,10 @@
 @use "./Variables" as vars;
 
 .DtoTecnico{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     img{
         height: calc(100vh - 150px);
