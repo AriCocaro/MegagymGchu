@@ -342,29 +342,40 @@ footer .Pie {
   height: calc(100vh - 150px);
   object-fit: contain;
 }
-.cuerpo .TarjetasStaff {
-  display: flex;
+.cuerpo .Staff {
   padding: 2rem;
-  justify-content: center;
-  align-items: center;
 }
-.cuerpo .TarjetasStaff .StaffUnipers {
-  margin: 10px;
-  position: relative;
+.cuerpo .Staff h1, .cuerpo .Staff p {
+  text-align: center;
+}
+.cuerpo .Staff .TarjetasStaff {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+.cuerpo .Staff .TarjetasStaff .StaffUnipers {
+  flex: 0 0 auto;
   width: 250px;
   height: 250px;
+  position: relative;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: center;
   cursor: pointer;
 }
-.cuerpo .TarjetasStaff .StaffUnipers img {
+.cuerpo .Staff .TarjetasStaff .StaffUnipers img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.cuerpo .TarjetasStaff .StaffUnipers .CardStaffOverlay {
+.cuerpo .Staff .TarjetasStaff .StaffUnipers .CardStaffOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -376,25 +387,24 @@ footer .Pie {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.cuerpo .TarjetasStaff .StaffUnipers:hover .CardStaffOverlay {
-  opacity: 1;
-}
-.cuerpo .TarjetasStaff .StaffUnipers .OverNombre {
+.cuerpo .Staff .TarjetasStaff .StaffUnipers .CardStaffOverlay .OverNombre {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
 }
-.cuerpo .TarjetasStaff .StaffUnipers .OverText {
+.cuerpo .Staff .TarjetasStaff .StaffUnipers .CardStaffOverlay .OverText {
   font-size: 12px;
   text-align: center;
-  margin-top: 0px;
 }
-
-form {
+.cuerpo .Staff .TarjetasStaff .StaffUnipers:hover .CardStaffOverlay {
+  opacity: 1;
+}
+.cuerpo form {
   margin-top: 25px;
   font-size: 1rem;
   padding: 2rem;
@@ -402,36 +412,36 @@ form {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-form .mb-3 {
+.cuerpo form .mb-3 {
   display: grid;
   grid-template-columns: 1fr;
 }
-form label {
+.cuerpo form label {
   text-align: center;
 }
-form .Nombre,
-form .Consulta,
-form .mb-3:nth-child(1),
-form .mb-3:nth-child(4) {
+.cuerpo form .Nombre,
+.cuerpo form .Consulta,
+.cuerpo form .mb-3:nth-child(1),
+.cuerpo form .mb-3:nth-child(4) {
   grid-column: span 2;
 }
-form .form-check {
+.cuerpo form .form-check {
   text-align: center;
 }
-form .Contactame,
-form .col-auto {
+.cuerpo form .Contactame,
+.cuerpo form .col-auto {
   grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-form .form-check-input:checked {
+.cuerpo form .form-check-input:checked {
   background-color: rgb(225, 202, 58);
   border-color: black;
   box-shadow: none;
 }
-form .Boton {
+.cuerpo form .Boton {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: rgb(225, 202, 58);
@@ -442,7 +452,7 @@ form .Boton {
   border-radius: 5px;
   margin-top: 1rem;
 }
-form .Boton:hover {
+.cuerpo form .Boton:hover {
   background-color: black;
   color: rgb(225, 202, 58);
 }

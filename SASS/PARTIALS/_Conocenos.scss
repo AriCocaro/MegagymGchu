@@ -59,115 +59,129 @@
 
     }
 
-   .TarjetasStaff {
+    .Staff {
+  padding: 2rem;
+
+  h1, p {
+    text-align: center;
+  }
+
+  .TarjetasStaff {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+
+    .StaffUnipers {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 250px;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      scroll-snap-align: center;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .CardStaffOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
         display: flex;
-        padding: 2rem;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+        padding: 15px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
 
-        .StaffUnipers {
-            margin: 10px;
-            position: relative;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-
-            .CardStaffOverlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-color: rgba(0, 0, 0, 0.6);
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 15px;
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-
-            &:hover .CardStaffOverlay {
-                opacity: 1;
-            }
-
-            .OverNombre {
-                font-size: 14px;
-                font-weight: bold;
-                text-align: center;
-            }
-
-            .OverText {
-                font-size: 12px;
-                text-align: center;
-                margin-top: 0px;
-            }
+        .OverNombre {
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
         }
+
+        .OverText {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+
+      &:hover .CardStaffOverlay {
+        opacity: 1;
+      }
     }
+  }
 }
 
-form {
-  margin-top: 25px;
-  font-size: 1rem;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 
-  // Cada campo es un grid de 1 columna
-  .mb-3 {
+    form {
+    margin-top: 25px;
+    font-size: 1rem;
+    padding: 2rem;
     display: grid;
-    grid-template-columns: 1fr;
-  }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 
-  
-  label {
-    text-align: center;
-  }
+    // Cada campo es un grid de 1 columna
+    .mb-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
- 
-  .Nombre,
-  .Consulta,
-  .mb-3:nth-child(1), 
-  .mb-3:nth-child(4) { 
-    grid-column: span 2;
-  }
+    
+    label {
+        text-align: center;
+    }
 
-  .form-check {
-    text-align: center;
-  }
+    
+    .Nombre,
+    .Consulta,
+    .mb-3:nth-child(1), 
+    .mb-3:nth-child(4) { 
+        grid-column: span 2;
+    }
 
-  .Contactame,
-  .col-auto {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
- 
-  .form-check-input:checked {
-  background-color: vars.$Amarillo;
-  border-color: vars.$Negro;
-  box-shadow: none;
- }
+    .form-check {
+        text-align: center;
+    }
+
+    .Contactame,
+    .col-auto {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .form-check-input:checked {
+    background-color: vars.$Amarillo;
+    border-color: vars.$Negro;
+    box-shadow: none;
+    }
 
 
 
-  .Boton {
-    @include mixin.EstiloBoton;
-    margin-top: 1rem;
-  }
+    .Boton {
+        @include mixin.EstiloBoton;
+        margin-top: 1rem;
+    }
+    }
 }
