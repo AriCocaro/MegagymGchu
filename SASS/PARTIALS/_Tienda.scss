@@ -1,0 +1,53 @@
+@use "./Variables" as vars;
+@use "./Mixins" as mixin;
+@use "./Display" as display;
+
+
+  form.d-flex {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    gap: 0.5rem; // separación entre input y botón
+  }
+
+   .Productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: vars.$Negro;
+
+    .card {
+      width: 18rem; 
+      height: 100%;
+      min-height: 420px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-color: vars.$Amarillo;
+      background-color: vars.$Negro;
+      text-align: center;
+      color: vars.$Blanco;
+      
+
+
+      img {
+        height: 180px;
+        object-fit: contain;
+      }
+
+      .card-body {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .Boton {
+        @include mixin.EstiloBoton;
+        margin-top: auto;
+      }
+    }
+  }
+
