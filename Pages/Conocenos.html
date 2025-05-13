@@ -125,8 +125,8 @@
      <p>
       Dependiendo el horario que asistas variaran los instructores y el personal de administracion, conocelos:
      </p>
-     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"></div>
-        <div class="carousel-inner"></div>
+     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
          <div class="TarjetasStaff">
            <div class="StaffUnipers">
              <img src="../Assets/Imagenes/PROFES/aRI.jpg" class="card-img" alt="Ariadna - Recepcionista">
@@ -155,6 +155,7 @@
          </div>
        </div>
        <button 
+
          class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -181,45 +182,48 @@
     </section>
 
     <section class="Contacto">
+      <h1>Contacto</h1>
       <form>
-       <legend>Contacto</legend>
         <div class="mb-3">
-         <label for="disabledTextInput" class="form-label">Nombre</label>
-         <input type="text" id="disabledTextInput" class="form-control" placeholder="">
-       </div>
-       <div class="mb-3">
-         <label for="disabledTextInput" class="form-label">N° de contacto</label>
-         <input type="number" id="disabledTextInput" class="form-control" placeholder="">
-       </div>
-       <div class="mb-3">
-         <label for="disabledTextInput" class="form-label">E-Mail</label>
-         <input type="email" id="disabledTextInput" class="form-control" placeholder="">
-       </div>
-       <div class="mb-3">
-         <label for="Consulta">Dejanos tu consulta</label>
-         <textarea class="form-control" placeholder="" id="Consulta" style="height: 100px"></textarea> 
-       </div>
-       <div>
-         <label for="ContactoMed">Deseo que me contacten mediante</label>
-       </div>
-       <div class="form-check">
-         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-         <label class="form-check-label" for="flexRadioDefault1">
-           Whatsapp
-         </label>
-       </div>
-            
-       <div class="form-check">
-         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-         <label class="form-check-label" for="flexRadioDefault2">
-           E-mail
-          </label>
-       </div>
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control Nombre">
+        </div>
 
-       <div class="col-auto">
-         <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">N° de contacto</label>
+          <input type="number" id="telefono" class="form-control Numero">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">E-Mail</label>
+          <input type="email" id="email" class="form-control Mail">
+        </div>
+
+        <div class="mb-3">
+          <label for="Consulta">Dejanos tu consulta</label>
+          <textarea class="form-control Consulta" id="Consulta" style="height: 100px"></textarea>
         </div>
         
+        <div class="Contactame">
+
+          <div class="mb-3">
+            <label for="ContactoMed">Deseo que me contacten mediante</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="medioContacto" id="whatsapp">
+            <label class="form-check-label" for="whatsapp">Whatsapp</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="medioContacto" id="emailContacto" checked>
+            <label class="form-check-label" for="emailContacto">E-mail</label>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3 Boton">Enviar</button>
+        </div>
       </form>
 
 
