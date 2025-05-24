@@ -137,18 +137,17 @@
 
 
    form {
- 
-    font-size: 1rem;
-    padding: 2rem;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    background-color: aqua;
+      font-size: 1rem;
+      padding: 2rem;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+  
       
 
       // Cada campo es un grid de 1 columna
-      .mb-3 {
+     .mb-3 {
         display: grid;
         grid-template-columns: 1fr;
         

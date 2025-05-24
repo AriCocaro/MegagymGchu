@@ -425,7 +425,6 @@ footer .Pie {
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  background-color: aqua;
 }
 .cuerpo .Contacto form .mb-3 {
   display: grid;
