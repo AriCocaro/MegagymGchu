@@ -7,11 +7,15 @@ body {
   font-family: vars.$Fuente;
   font-size: medium;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 header {
   width: 100%;
-  background-color: vars.$Negro;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,22 +25,41 @@ header {
   .Encabezado {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: center;
+    max-height: 130px;
     flex-wrap: wrap;
-  
-    .LogoInst {
-      max-width: 150px;
-      height: auto;
+    background-color: vars.$Negro;
+   
+
+    figure{
+    
+     .LogoInst {
+        width: auto;
+        max-height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10px 10px 10px;
+
+
+         
+      }
+
     }
+  
+
   
     .PagesList {
       flex-grow: 1;
       display: flex;
       margin-left: 100px;
+
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
+ 
+        
       }
   
       .topnav {
@@ -66,6 +89,7 @@ header {
   
         .icon {
           display: none;
+  
         }
   
         &.responsive {
@@ -87,6 +111,7 @@ header {
     top: 1rem;
     cursor: pointer;
     z-index: 4;
+    background-color: red;
   }
 }
 

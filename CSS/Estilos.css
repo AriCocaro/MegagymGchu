@@ -9,9 +9,14 @@ body {
   font-size: medium;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   width: 100%;
-  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,12 +26,18 @@ header {
 header .Encabezado {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: center;
+  max-height: 130px;
   flex-wrap: wrap;
+  background-color: black;
 }
-header .Encabezado .LogoInst {
-  max-width: 150px;
-  height: auto;
+header .Encabezado figure .LogoInst {
+  width: auto;
+  max-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
 }
 header .Encabezado .PagesList {
   flex-grow: 1;
@@ -74,6 +85,7 @@ header .TNMF a {
   top: 1rem;
   cursor: pointer;
   z-index: 4;
+  background-color: red;
 }
 
 main {
