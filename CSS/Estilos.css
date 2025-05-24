@@ -85,7 +85,6 @@ header .TNMF a {
   top: 1rem;
   cursor: pointer;
   z-index: 4;
-  background-color: red;
 }
 
 main {
@@ -330,8 +329,7 @@ footer .Pie {
   gap: 2rem;
   flex-wrap: wrap;
 }
-.cuerpo .Ubicacion .ContenedorFrente .GymFrente,
-.cuerpo .Ubicacion .ContenedorFrente .Map {
+.cuerpo .Ubicacion .ContenedorFrente .GymFrente, .cuerpo .Ubicacion .ContenedorFrente .Map {
   width: 100%;
   max-width: 500px;
   height: 300px;
@@ -343,8 +341,7 @@ footer .Pie {
   .cuerpo .Ubicacion .ContenedorFrente {
     flex-wrap: nowrap;
   }
-  .cuerpo .Ubicacion .GymFrente,
-  .cuerpo .Ubicacion .Map {
+  .cuerpo .Ubicacion .GymFrente, .cuerpo .Ubicacion .Map {
     width: 50%;
     height: 400px;
   }
@@ -416,44 +413,46 @@ footer .Pie {
 .cuerpo .Staff .TarjetasStaff .StaffUnipers:hover .CardStaffOverlay {
   opacity: 1;
 }
-.cuerpo form {
-  margin-top: 25px;
+.cuerpo .Contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cuerpo .Contacto form {
   font-size: 1rem;
   padding: 2rem;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  background-color: aqua;
 }
-.cuerpo form .mb-3 {
+.cuerpo .Contacto form .mb-3 {
   display: grid;
   grid-template-columns: 1fr;
 }
-.cuerpo form label {
+.cuerpo .Contacto form label {
   text-align: center;
 }
-.cuerpo form .Nombre,
-.cuerpo form .Consulta,
-.cuerpo form .mb-3:nth-child(1),
-.cuerpo form .mb-3:nth-child(4) {
+.cuerpo .Contacto form .Nombre, .cuerpo .Contacto form .Consulta, .cuerpo .Contacto form .mb-3:nth-child(1), .cuerpo .Contacto form .mb-3:nth-child(4) {
   grid-column: span 2;
 }
-.cuerpo form .form-check {
+.cuerpo .Contacto form .form-check {
   text-align: center;
 }
-.cuerpo form .Contactame,
-.cuerpo form .col-auto {
+.cuerpo .Contacto form .Contactame, .cuerpo .Contacto form .col-auto {
   grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-.cuerpo form .form-check-input:checked {
+.cuerpo .Contacto form .form-check-input:checked {
   background-color: rgb(225, 202, 58);
   border-color: black;
   box-shadow: none;
 }
-.cuerpo form .Boton {
+.cuerpo .Contacto form .Boton {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: rgb(225, 202, 58);
@@ -464,7 +463,7 @@ footer .Pie {
   border-radius: 5px;
   margin-top: 1rem;
 }
-.cuerpo form .Boton:hover {
+.cuerpo .Contacto form .Boton:hover {
   background-color: black;
   color: rgb(225, 202, 58);
 }
