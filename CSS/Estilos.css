@@ -54,6 +54,9 @@ header .Encabezado .PagesList .topnav {
   justify-content: space-between;
   flex-grow: 1;
 }
+header .Encabezado .PagesList .topnav .X {
+  justify-content: flex-end;
+}
 header .Encabezado .PagesList .topnav .ItemNav {
   color: white;
   text-decoration: none;
@@ -73,6 +76,13 @@ header .Encabezado .PagesList .topnav a:hover {
 header .Encabezado .PagesList .topnav .icon {
   display: none;
 }
+header .Encabezado .PagesList .topnav .Redes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  text-align: center;
+  padding-right: 10px;
+}
 header .Encabezado .PagesList .topnav.responsive {
   width: 100%;
 }
@@ -88,9 +98,10 @@ header .TNMF a {
 }
 
 main {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 main h1 {
+  background-color: yellow;
   margin-top: 50px;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -417,8 +428,11 @@ footer .Pie {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: red;
+  margin: 0px 0px 0px 0px;
 }
 .cuerpo .Contacto form {
+  background-color: aqua;
   font-size: 1rem;
   padding: 2rem;
   display: grid;
@@ -558,7 +572,7 @@ form.d-flex {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  color: white;
+  /*color: ;*/
   text-align: center;
   text-shadow: 2px 2px 4px black;
 }
@@ -567,6 +581,10 @@ form.d-flex {
 }
 .PrimerVideo .TextoDelVideo h2 {
   font-size: 1.25rem;
+}
+.PrimerVideo .TextoDelVideo .Amarillo {
+  color: rgb(225, 202, 58);
+  background-color: transparent;
 }
 .PrimerVideo .TextoDelVideo .Boton {
   margin-top: 1rem;

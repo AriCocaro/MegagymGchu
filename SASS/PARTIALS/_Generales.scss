@@ -67,6 +67,10 @@ header {
         justify-content: space-between; // ← distribuye los links con el mismo espacio entre ellos
         flex-grow: 1;
 
+        .X{
+          justify-content: flex-end;
+        }
+
         .ItemNav {
           color: vars.$Blanco;
           text-decoration: none;
@@ -91,14 +95,20 @@ header {
           display: none;
   
         }
+
+       .Redes{
+          display: flex;
+          justify-content: flex-end;
+          gap: 8px;
+          text-align: center;
+          padding-right: 10px;
+        }
   
         &.responsive {
           width: 100%;
         }
       }
-    }
-    
- 
+    }  
 
  }
  .TNMF {
@@ -121,8 +131,9 @@ header {
 
 
 main {
-  margin-top: 150px;
+  margin-top: 100px;
    h1 {
+    background-color: yellow;
     margin-top: 50px;
     font-size: 2rem;
     margin-bottom: 2rem;

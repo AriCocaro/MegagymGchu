@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    color: white;
+    /*color: ;*/
     text-align: center;
     text-shadow: 2px 2px 4px black;
 
@@ -43,6 +43,11 @@
 
     h2 {
       font-size: 1.25rem;
+    }
+
+    .Amarillo{
+      color: vars.$Amarillo;
+      background-color: transparent;
     }
 
     .Boton {
