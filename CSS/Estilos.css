@@ -26,36 +26,37 @@ header {
 header .Encabezado {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   max-height: 130px;
-  flex-wrap: wrap;
   background-color: black;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+header .Encabezado a {
+  display: block;
+}
+header .Encabezado figure {
+  margin: 0;
 }
 header .Encabezado figure .LogoInst {
-  width: auto;
   max-height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px 10px 10px;
+  display: block;
+  padding: 10px;
 }
 header .Encabezado .PagesList {
   flex-grow: 1;
   display: flex;
-  margin-left: 100px;
-}
-header .Encabezado .PagesList ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: space-around;
+  margin-left: 0;
+  width: auto;
 }
 header .Encabezado .PagesList .topnav {
   display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
+  align-items: center;
+  gap: 16px;
 }
-header .Encabezado .PagesList .topnav .X {
-  justify-content: flex-end;
+header .Encabezado .PagesList .topnav ul {
+  list-style: none;
 }
 header .Encabezado .PagesList .topnav .ItemNav {
   color: white;
@@ -73,20 +74,16 @@ header .Encabezado .PagesList .topnav a:hover {
   background-color: rgb(225, 202, 58);
   color: black;
 }
-header .Encabezado .PagesList .topnav .icon {
-  display: none;
-}
 header .Encabezado .PagesList .topnav .Redes {
   display: flex;
-  justify-content: flex-end;
   gap: 8px;
-  text-align: center;
+  align-items: center;
   padding-right: 10px;
 }
-header .Encabezado .PagesList .topnav.responsive {
-  width: 100%;
+header .Encabezado .PagesList .topnav .X {
+  display: none;
 }
-header .TNMF a {
+header .Encabezado .PagesList .TNMF a {
   font-size: 2rem;
   color: white;
   padding: 1rem;
@@ -94,14 +91,13 @@ header .TNMF a {
   right: 1rem;
   top: 1rem;
   cursor: pointer;
-  z-index: 4;
+  z-index: 9999;
 }
 
 main {
   margin-top: 100px;
 }
 main h1 {
-  background-color: yellow;
   margin-top: 50px;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -195,35 +191,27 @@ footer .Pie {
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: #000;
   }
   header .Encabezado .topnav a {
     display: block;
     width: 100%;
     text-align: left;
     padding: 10px;
+    color: white;
+    text-decoration: none;
   }
   header .Encabezado .topnav.responsive {
     display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 @media (min-width: 1025px) {
-  .topnav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .topnav a {
-    display: block;
-    padding: 14px 20px;
-    text-align: center;
-  }
-  .icon {
-    display: none;
-  }
-}
-@media (min-width: 769px) {
-  .TNMF {
-    display: none !important;
+  .PagesList {
+    width: auto;
+    font-weight: bold;
   }
 }
 @media (max-width: 768px) {
@@ -231,7 +219,11 @@ footer .Pie {
     display: block;
   }
 }
-
+@media (min-width: 769px) {
+  .TNMF {
+    display: none !important;
+  }
+}
 @media (min-width: 769px) {
   .X {
     display: none !important;
@@ -428,11 +420,9 @@ footer .Pie {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
   margin: 0px 0px 0px 0px;
 }
 .cuerpo .Contacto form {
-  background-color: aqua;
   font-size: 1rem;
   padding: 2rem;
   display: grid;

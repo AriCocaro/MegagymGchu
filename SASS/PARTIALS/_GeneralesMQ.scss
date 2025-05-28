@@ -18,46 +18,45 @@
     .topnav {
       display: none;
       flex-direction: column;
-      width: 100%;
+      width: 100%; // ✅ ancho completo del contenedor
+      background-color: #000; // o el color que uses
 
       a {
         display: block;
         width: 100%;
         text-align: left;
         padding: 10px;
+        color: white;
+        text-decoration: none;
       }
     }
 
     .topnav.responsive {
       display: flex;
+      position: relative; // ✅ se comporta como flujo normal
+      top: 0;
+      left: 0;
     }
   }
 }
+
 
 @include Display.responsive(desktop) {
-  .topnav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    a {
-      display: block;
-      padding: 14px 20px;
-      text-align: center;
-    }
-  }
-
-  .icon {
-    display: none;
+  .PagesList {
+    width: auto;
+    font-weight: bold;
   }
 }
-.TNMF {
-  @media (min-width: 769px) {
-    display: none !important;
-  }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .TNMF {
     display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .TNMF {
+    display: none !important;
   }
 }
 

@@ -25,107 +25,88 @@ header {
   .Encabezado {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; // ← separa logo y menú
     max-height: 130px;
-    flex-wrap: wrap;
     background-color: vars.$Negro;
-   
+    padding: 0 20px; // opcional para espacio interior
+    flex-wrap: nowrap; // ← evita que se rompa en dos filas
 
-    figure{
-    
-     .LogoInst {
-        width: auto;
-        max-height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 10px 10px 10px;
-
-
-         
-      }
-
+    a {
+      display: block;
     }
-  
 
-  
+    figure {
+      margin: 0;
+
+      .LogoInst {
+        max-height: 130px;
+        display: block;
+        padding: 10px;
+      }
+    }
+
     .PagesList {
       flex-grow: 1;
       display: flex;
-      margin-left: 100px;
+      justify-content:space-around; 
+      margin-left: 0; 
+      width: auto;
 
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
- 
-        
-      }
-  
       .topnav {
         display: flex;
-        justify-content: space-between; // ← distribuye los links con el mismo espacio entre ellos
-        flex-grow: 1;
-
-        .X{
-          justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        
+        ul{
+          list-style: none;
         }
 
         .ItemNav {
           color: vars.$Blanco;
           text-decoration: none;
+
         }
-  
-        a {
-          text-decoration: none;
-          color: white;
-          padding: 14px 16px;
-          display: block;
-          width: 100%; // Opcional, si querés que todos los links midan lo mismo
-          text-align: center;
+
+       a {
+         text-decoration: none;
+         color: white;
+         padding: 14px 16px;
+         display: block;
+         width: 100%; // Opcional, si querés que todos los links midan lo mismo
+         text-align: center;
         }
-  
         a:hover {
           background-color: vars.$Amarillo;
           color: black;
         }
-  
-  
-        .icon {
-          display: none;
-  
-        }
 
-       .Redes{
+        .Redes {
           display: flex;
-          justify-content: flex-end;
           gap: 8px;
-          text-align: center;
+          align-items: center;
           padding-right: 10px;
         }
-  
-        &.responsive {
-          width: 100%;
+
+        .X {
+          display: none; // se muestra solo en mobile
         }
       }
-    }  
-
- }
- .TNMF {
-  a {
-    font-size: 2rem;
-    color: vars.$Blanco;
-    padding: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
-    z-index: 4;
-    
+      .TNMF {
+        a {
+          font-size: 2rem;
+          color: vars.$Blanco;
+          padding: 1rem;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          cursor: pointer;
+          z-index: 9999;
+        }
+      }
+    }
   }
 }
 
-}
 
 
 
@@ -133,7 +114,7 @@ header {
 main {
   margin-top: 100px;
    h1 {
-    background-color: yellow;
+   
     margin-top: 50px;
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -210,4 +191,4 @@ footer {
     align-items: center;
 
   }
-}  
+}
