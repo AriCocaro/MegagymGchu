@@ -13,23 +13,22 @@ body {
   box-sizing: border-box;
 }
 
-
 header {
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 
   .Encabezado {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between; // ← separa logo y menú
+    justify-content: space-between;
     max-height: 130px;
     background-color: vars.$Negro;
-    padding: 0 20px; // opcional para espacio interior
-    flex-wrap: nowrap; // ← evita que se rompa en dos filas
+    padding: 0 20px;
+    flex-wrap: nowrap;
 
     a {
       display: block;
@@ -48,33 +47,34 @@ header {
     .PagesList {
       flex-grow: 1;
       display: flex;
-      justify-content:space-around; 
-      margin-left: 0; 
+      justify-content: space-around;
+      margin-left: 0;
       width: auto;
 
       .topnav {
         display: flex;
         align-items: center;
         gap: 16px;
-        
-        ul{
+
+        ul {
           list-style: none;
+          display: flex;
+          gap: 1rem;
         }
 
         .ItemNav {
           color: vars.$Blanco;
           text-decoration: none;
-
         }
 
-       a {
-         text-decoration: none;
-         color: white;
-         padding: 14px 16px;
-         display: block;
-         width: 100%; // Opcional, si querés que todos los links midan lo mismo
-         text-align: center;
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 14px 16px;
+          display: block;
+          text-align: center;
         }
+
         a:hover {
           background-color: vars.$Amarillo;
           color: black;
@@ -88,21 +88,23 @@ header {
         }
 
         .X {
-          display: none; // se muestra solo en mobile
+          display: none;
         }
       }
-      .TNMF {
-        a {
-          font-size: 2rem;
-          color: vars.$Blanco;
-          padding: 1rem;
-          position: absolute;
-          right: 1rem;
-          top: 1rem;
-          cursor: pointer;
-          z-index: 9999;
-        }
-      }
+    }
+
+    .TNMF-icon {
+      font-size: 2rem;
+      color: vars.$Blanco;
+      padding: 1rem;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      cursor: pointer;
+      z-index: 9999;
+      background: transparent;
+      border: none;
+      display: none; // Por defecto oculto (desktop)
     }
   }
 }

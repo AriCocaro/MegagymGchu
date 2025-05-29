@@ -17,13 +17,13 @@ body {
 
 header {
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 }
 header .Encabezado {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,6 +57,8 @@ header .Encabezado .PagesList .topnav {
 }
 header .Encabezado .PagesList .topnav ul {
   list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 header .Encabezado .PagesList .topnav .ItemNav {
   color: white;
@@ -67,7 +69,6 @@ header .Encabezado .PagesList .topnav a {
   color: white;
   padding: 14px 16px;
   display: block;
-  width: 100%;
   text-align: center;
 }
 header .Encabezado .PagesList .topnav a:hover {
@@ -83,7 +84,7 @@ header .Encabezado .PagesList .topnav .Redes {
 header .Encabezado .PagesList .topnav .X {
   display: none;
 }
-header .Encabezado .PagesList .TNMF a {
+header .Encabezado .TNMF-icon {
   font-size: 2rem;
   color: white;
   padding: 1rem;
@@ -92,6 +93,9 @@ header .Encabezado .PagesList .TNMF a {
   top: 1rem;
   cursor: pointer;
   z-index: 9999;
+  background: transparent;
+  border: none;
+  display: none;
 }
 
 main {
@@ -176,62 +180,85 @@ footer .Pie {
 }
 
 @media (min-width: 300px) and (max-width: 767px) {
+  header {
+    position: relative;
+  }
   header .Encabezado {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
-  header .Encabezado .icon {
+  header .Encabezado figure {
+    width: 100%;
+  }
+  header .Encabezado .TNMF-icon {
     display: block;
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
   }
-  header .Encabezado .topnav {
+  header .Encabezado .PagesList {
+    width: 100%;
+  }
+  header .Encabezado .PagesList .topnav {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #000;
-  }
-  header .Encabezado .topnav a {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-  }
-  header .Encabezado .topnav.responsive {
-    display: flex;
+    background-color: black;
+    padding: 0;
     position: relative;
     top: 0;
     left: 0;
   }
+  header .Encabezado .PagesList .topnav.open {
+    display: flex;
+  }
+  header .Encabezado .PagesList .topnav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  header .Encabezado .PagesList .topnav ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+  header .Encabezado .PagesList .topnav ul a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    text-align: left;
+  }
+  header .Encabezado .PagesList .topnav ul a:hover {
+    background-color: rgb(225, 202, 58);
+    color: black;
+  }
 }
 @media (min-width: 1025px) {
-  .PagesList {
+  header {
+    position: fixed;
+  }
+  header .TNMF-icon {
+    display: none !important;
+  }
+  header .PagesList {
     width: auto;
     font-weight: bold;
   }
-}
-@media (max-width: 768px) {
-  .TNMF {
-    display: block;
+  header .PagesList .topnav {
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: transparent !important;
   }
-}
-@media (min-width: 769px) {
-  .TNMF {
-    display: none !important;
+  header .PagesList ul {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
   }
-}
-@media (min-width: 769px) {
-  .X {
-    display: none !important;
+  header .PagesList .ItemNav {
+    color: rgb(225, 202, 58);
   }
-}
-
-@media (min-width: 769px) {
-  #mySidebar {
+  header #mySidebar {
     display: flex !important;
     position: static;
     height: auto;
@@ -239,42 +266,10 @@ footer .Pie {
     padding: 0;
     width: auto;
   }
-}
-@media (max-width: 768px) {
-  #mySidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: black;
-    padding-top: 60px;
-    width: 300px;
-    z-index: 3;
-    transition: 0.3s;
+  header .X {
+    display: none !important;
   }
 }
-
-@media (min-width: 769px) {
-  .PagesList ul {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-}
-@media (max-width: 768px) {
-  .PagesList ul {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 769px) {
-  .ItemNav {
-    color: rgb(225, 202, 58);
-  }
-}
-
 /*footer*/
 @media (max-width: 768px) {
   footer .DescApp {

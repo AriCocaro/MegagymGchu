@@ -2,116 +2,124 @@
 @use "./Display";
 @use "./Variables" as vars;
 
+
 @include Display.responsive(mobile) {
-  header .Encabezado {
-    flex-direction: column;
-    align-items: flex-start;
+  header {
+    position: relative;
 
-    .icon {
-      display: block;
-      cursor: pointer;
-      color: white;
-      font-size: 24px;
-      padding: 10px;
-    }
-
-    .topnav {
-      display: none;
+    .Encabezado {
       flex-direction: column;
-      width: 100%; // ✅ ancho completo del contenedor
-      background-color: #000; // o el color que uses
+      align-items: flex-start;
+      width: 100%;
 
-      a {
-        display: block;
+      figure {
         width: 100%;
-        text-align: left;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
       }
-    }
 
-    .topnav.responsive {
-      display: flex;
-      position: relative; // ✅ se comporta como flujo normal
-      top: 0;
-      left: 0;
+      .TNMF-icon {
+        display: block; // Mostrar el botón hamburguesa en móvil
+      }
+
+      .PagesList {
+        width: 100%;
+
+        .topnav {
+          display: none; // Oculto por defecto
+          flex-direction: column;
+          width: 100%;
+          background-color: vars.$Negro;
+          padding: 0;
+          position: relative;
+          top: 0;
+          left: 0;
+
+          &.open {
+            display: flex; // Mostrar cuando tenga clase "open"
+          }
+
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            li {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+              width: 100%;
+            }
+
+            a {
+              color: vars.$Blanco;
+              text-decoration: none;
+              padding: 1rem;
+              display: block;
+              text-align: left;
+
+              &:hover {
+                background-color: vars.$Amarillo;
+                color: black;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 
 @include Display.responsive(desktop) {
-  .PagesList {
-    width: auto;
-    font-weight: bold;
-  }
-}
-
-@media (max-width: 768px) {
-  .TNMF {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .TNMF {
-    display: none !important;
-  }
-}
-
-// Ocultar la X (primer link del menú) en desktop
-.X {
-  @media (min-width: 769px) {
-    display: none !important;
-  }
-}
-
-#mySidebar {
-  @media (min-width: 769px) {
-    display: flex !important;
-    position: static;
-    height: auto;
-    background-color: transparent;
-    padding: 0;
-    width: auto;
-  }
-
-  @media (max-width: 768px) {
-    display: none;
+  header {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: vars.$Negro;
-    padding-top: 60px;
-    width: 300px;
-    z-index: 3;
-    transition: 0.3s;
+
+    // Oculta el icono hamburguesa en desktop
+    .TNMF-icon {
+      display: none !important;
+    }
+
+    // Asegura que el menú se vea correctamente en escritorio
+    .PagesList {
+      width: auto;
+      font-weight: bold;
+
+      .topnav {
+        display: flex !important;
+        flex-direction: row !important;
+        background-color: transparent !important;
+      }
+
+      ul {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .ItemNav {
+        color: vars.$Amarillo;
+      }
+    }
+
+    #mySidebar {
+      display: flex !important;
+      position: static;
+      height: auto;
+      background-color: transparent;
+      padding: 0;
+      width: auto;
+    }
+
+    .X {
+      display: none !important;
+    }
   }
 }
 
-.PagesList ul {
-
-  @media (min-width: 769px) {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.ItemNav {
 
 
-  @media (min-width: 769px) {
-    color: vars.$Amarillo;
-  }
-}
+
+
 
 
 

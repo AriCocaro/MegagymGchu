@@ -38,52 +38,44 @@
 
 <body>
   <header>
-
-   <div class="Encabezado">
-     <a href="#">
-        <figure><img class="LogoInst" src="./Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo Megagym" /></figure>
+    <div class="Encabezado">
+      <a href="#">
+        <figure>
+          <img class="LogoInst" src="./Assets/Imagenes/Logos/BotonSinFondo.png" alt="Logo Megagym" />
+        </figure>
       </a>
-          
-     <nav class="PagesList"  id="mySidebar"><br>               
-       <div class="topnav" id="myTopnav">
-        <ul>
-          <li><a href="javascript:void(0)" onclick="w3_close()" class="ItemNav Boton X">X</a></li>       
-          <li><a href="./Pages/Conocenos.html" onclick="w3_close()" class="ItemNav Boton">CONOCENOS</a> </li>
-          <li><a href="./Pages/Tienda.html" onclick="w3_close()" class="ItemNav Boton">TIENDA</a> </li>
-          <li><a href="./Pages/Eventos.html" onclick="w3_close()" class="ItemNav Boton">EVENTOS</a></li>
-          <li><a href="./Pages/DeptoTecnico.html" onclick="w3_close()" class="ItemNav Boton">DEPARTAMENTO TECNICO</a></li>
-          <li><a href="./Pages/IniciarSesion.html" onclick="w3_close()" class="ItemNav Boton">INICIAR SESION</a></li>
-         <!-- Iconos agregados -->
-          <li>
-            <div class="Redes">
-              <a href="https://wa.me/549344670344" target="_blank" class="ItemNav Boton" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-          
-              <a href="https://www.instagram.com/megagymgchu" target="_blank" class="ItemNav Boton " aria-label="Instagram">
-                <i class="fa-brands fa-instagram "></i>
-              </a>
-        
-              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.0643507156933!2d-58.51962702437106!3d-33.00207887469038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa827d0b53203%3A0xcc811859434b0529!2sMega%20Gym!5e0!3m2!1ses!2sar!4v1737480845385!5m2!1ses!2sar" target="_blank" class="ItemNav Boton " aria-label="Ubicación">
-                <i class="fa-solid fa-location-dot"></i>
-              </a>
-            </div>
-          </li>
 
-        </ul>
-       </div>
-      </nav>   
- 
-    </div>
+      <!-- Ícono hamburguesa -->
+      <button class="TNMF-icon" onclick="toggleMenu()" id="menuToggle">☰</button>
 
-    <div class="TNMF">
-      <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-  
-     <!-- Overlay effect when opening sidebar on small screens -->
-     <div class="EfectoOverlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-     
+      <!-- Menú -->
+      <nav class="PagesList">
+        <div class="topnav" id="mySidebar">
+          <ul>
+            <li><a href="./Pages/Conocenos.html" class="ItemNav Boton" onclick="toggleMenu()">CONOCENOS</a></li>
+            <li><a href="./Pages/Tienda.html" class="ItemNav Boton" onclick="toggleMenu()">TIENDA</a></li>
+            <li><a href="./Pages/Eventos.html" class="ItemNav Boton" onclick="toggleMenu()">EVENTOS</a></li>
+            <li><a href="./Pages/DeptoTecnico.html" class="ItemNav Boton" onclick="toggleMenu()">DEPARTAMENTO TECNICO</a></li>
+            <li><a href="./Pages/IniciarSesion.html" class="ItemNav Boton" onclick="toggleMenu()">INICIAR SESION</a></li>
+            <li>
+              <div class="Redes">
+                <a href="https://wa.me/549344670344" target="_blank" class="ItemNav Boton" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/megagymgchu" target="_blank" class="ItemNav Boton" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://maps.google.com" target="_blank" class="ItemNav Boton" aria-label="Ubicación">
+                  <i class="fa-solid fa-location-dot"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
- </header>
+  </header>
+
           
     
  <main>
@@ -118,18 +110,21 @@
  </footer>
        
 
- <script>
-   <!--Script to open and close sidebar-->
-    function w3_open() {
-     document.getElementById("mySidebar").style.display = "block";
-     document.getElementById("myOverlay").style.display = "block";
-   }
-      
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-   }
-   </script>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("mySidebar");
+      const icon = document.getElementById("menuToggle");
+
+      sidebar.classList.toggle("open");
+
+      // Cambiar el icono
+      if (sidebar.classList.contains("open")) {
+        icon.innerHTML = "✖";
+      } else {
+        icon.innerHTML = "☰";
+      }
+    }
+  </script>
 
 
 
