@@ -376,6 +376,9 @@ footer .Pie {
   object-fit: cover;
   display: block;
 }
+.cuerpo .Staff .TarjetasStaff .StaffUnipers img.AriNati {
+  object-position: center top;
+}
 .cuerpo .Staff .TarjetasStaff .StaffUnipers .CardStaffOverlay {
   position: absolute;
   top: 0;
@@ -472,14 +475,27 @@ footer .Pie {
   object-fit: contain;
 }
 
-form.d-flex {
+.cuerpo form.d-flex {
   width: 100%;
   max-width: 50%;
   margin: 0 auto;
   gap: 0.5rem;
 }
-
-.Productos {
+.cuerpo form.d-flex button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(225, 202, 58);
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cuerpo form.d-flex button:hover {
+  background-color: black;
+  color: rgb(225, 202, 58);
+}
+.cuerpo .Productos {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -487,29 +503,35 @@ form.d-flex {
   padding: 2rem;
   background-color: black;
 }
-.Productos .card {
-  width: 18rem;
-  height: 100%;
-  min-height: 420px;
+.cuerpo .Productos .card {
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 300%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-color: rgb(225, 202, 58);
+  border: 1px solid rgb(225, 202, 58);
   background-color: black;
   text-align: center;
   color: white;
 }
-.Productos .card img {
-  height: 180px;
+.cuerpo .Productos .card .card-img-top {
+  width: 100%;
+  aspect-ratio: 1/1;
   object-fit: contain;
 }
-.Productos .card .card-body {
+.cuerpo .Productos .card .card-body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
 }
-.Productos .card .Boton {
+.cuerpo .Productos .card .card-text {
+  margin: 0px;
+  padding: 8px;
+}
+.cuerpo .Productos .card .Boton {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: rgb(225, 202, 58);
@@ -520,11 +542,20 @@ form.d-flex {
   border-radius: 5px;
   margin-top: auto;
 }
-.Productos .card .Boton:hover {
+.cuerpo .Productos .card .Boton:hover {
   background-color: black;
   color: rgb(225, 202, 58);
 }
 
+@media (min-width: 300px) and (max-width: 767px) {
+  .d-flex {
+    max-width: 100%;
+    margin: 0px;
+  }
+  .texto-buscar {
+    display: none;
+  }
+}
 .FormIS {
   display: flex;
   flex-direction: column;
@@ -550,6 +581,11 @@ form.d-flex {
   color: rgb(225, 202, 58);
 }
 
+@media (min-width: 300px) and (max-width: 767px) {
+  .cuerpo h1 {
+    margin: 0px;
+  }
+}
 .PrimerVideo {
   position: relative;
   width: 100%;
